@@ -1,0 +1,616 @@
+body {
+  margin: 0;
+}
+/* Container Header*/
+.container{
+  display: grid;
+  justify-items: center;
+  justify-self: center;
+  margin-bottom: 40px;
+  padding: 40px 0px 0px 0px;
+  width: 750px;
+  height: 135px;
+  z-index: 0;
+}
+/* Titulo Header*/
+.titulo{
+  text-align: center;
+  font-family: 'Kanit';
+  font-weight: 500;
+  font-size: 1.5rem;
+  width: 122px;
+  height: 39px;
+  line-height: 38.87px;
+  color: #252525;
+}
+.dark .titulo {
+  color: white;
+}
+/* Container Form*/
+.containerForm{
+  justify-items: center;
+  gap: 16px;
+  display: flex;
+  margin: 0 auto;
+  width: 750px;
+  height: 38px;
+}
+/* Pesquisa */
+.search{
+  display: flex;
+  width: 595px;
+  height: 38px;
+  border-radius: 5px;
+  border: #6C63FF solid 1px;
+  padding: 8px, 16px, 8px, 16px;
+  gap: 436px;
+  outline: #6C63FF;
+  background: url('/App/img/Vector.png');
+  font-family: 'Kanit';
+}
+.dark .search {
+  border: 1px solid white;
+}
+.dark .search::placeholder {
+  color: #666666;
+  font-family: 'Inter';
+}
+.lupa {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.searchContainer{
+  position: relative;
+}
+.dark .searchContainer input {
+  color: #DDDDDD;
+}
+input::placeholder {
+  font-family: 'Inter';
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 16px;
+  color: #C3C1E5;
+  width: 106px;
+  height: 16px;
+}
+/* Botao ALL */
+button[data-filter='Incomplete'] {
+  width: 130px;
+}
+.containerButtonAll{
+  position: relative;
+}
+.containerButtonAll .arrowDown.fixed {
+  transform: rotate(180deg);
+  transition: 0.4s;
+}
+.all{
+  display: flex;
+  color: white;
+  width: 85px;
+  border: #6C63FF solid 1px;
+  padding: 10px;
+  font-family: 'Kanit';
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 18px;
+  background-color: #6C63FF;
+  border-radius: 5px;
+  cursor: pointer;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  z-index: 3000;
+}
+.all:hover{
+  background: #534CC2;
+}
+.arrowDown {
+  position: absolute;
+  right: 10px;
+  bottom: 15px;
+}
+/* Botao noturno */
+.noturno{
+  border: #6C63FF solid 1px;
+  width: 38px;
+  color: white;
+  background: url('/App/img/Vector.png') no-repeat center center, #6C63FF;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.noturno:hover{
+  background: #534CC2;
+}
+.dark {
+  background: #333;
+  margin: 0px;
+  padding: 0px;
+  max-width: 100%;
+  color: white;
+}
+/* Container Body */
+.containerBody{
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  width: 750px;
+  height: 575px;
+  margin: 0 auto;
+  gap: 30px;
+}
+.velinho {
+  display: flex;
+  align-self: center;
+}
+.empty {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial;
+  font-weight: 400;
+  font-size: 20px;
+  font-family: 'Kanit';
+  line-height: 20px;
+}
+.containerList{
+  display: flex;
+  justify-content: space-between;
+  width: 520px;
+}
+.containerList span {
+  margin-left: 10px;
+  font-size: 18px;
+  line-height: 15px;
+}
+.checked {
+  display: flex;
+  align-items: center;
+}
+.checked input {
+  color: #333333;
+  font-family: 'Kanit';
+  outline: none;
+}
+.list {
+justify-items: center;
+align-self: center;
+list-style: none;
+width: 520px;
+}
+.list span {
+  justify-items: center;
+}
+.list:not(:last-child) {
+  border-bottom: #6C63FFA1 solid 1px;
+  border-radius: 2px;
+}
+.checkbox {
+  width: 23px;
+  height: 23px;
+  accent-color: #6c63ff;
+}
+.inputEdit{
+  width: 300px;
+  border: #6C63FF solid 1px;
+  border-radius: 3px;
+}
+.inputEdit::placeholder {
+  font-family: 'Inter';
+  font-size: 13px;
+  color: #C3C1E5;
+}
+/* Botões da lista*/
+.btnDelete {
+  border: none;
+  background: none;
+}
+.delete{
+  cursor: pointer;
+}
+.delete:hover path {
+  stroke: red
+}
+.btnEdit {
+  background: none;
+  border: none;
+}
+.edit {
+  cursor: pointer;
+}
+.edit:hover path {
+  stroke: #6C63FF;
+}
+/* Botao do Form */
+.form{
+  border: #6C63FF solid 1px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: #6C63FF;
+  align-self: end;
+}
+.form:hover{
+  background:#534CC2;
+}
+/* Container modal Fora*/
+.containerModalFora {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+/* Container Modal Dentro*/
+.containerModalDentro{
+  z-index: 2;
+  position: fixed;
+  top: 154px;
+  justify-items: center;
+  background: white;
+  width: 500px;
+  height: 289px;
+  border-radius: 16px;
+  border: #252525 solid 1px;
+}
+.containerModalDentro.ativo{
+  display: grid;
+}
+.dark .containerModalDentro {
+  background: #252525;
+  border: 1px solid white;
+}
+.dark .containerModalDentro input {
+  color: #DDDDDD;
+  font-family: 'Kanit';
+}
+/* Titulo do Modal*/
+.modalTitulo{
+  margin-bottom: 0;
+  text-align: center;
+  width: 116px;
+  height: 24px;
+  font-family: 'Kanit';
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 24px;
+  color: #252525;
+  margin-bottom: 30px;
+}
+.dark .modalTitulo {
+  color: white;
+}
+/* Input do Modal*/
+.inputModal{
+  width: 440px;
+  height: 38px;
+  padding: 8px, 16px, 8px, 16px;
+  border-radius: 5px;
+  border: #6C63FF solid 1px;
+  gap: 436px;
+  outline: #6C63FF;
+}
+.dark .inputModal{
+  background: #252525;
+  border: 1px solid white;
+}
+.inputModal::placeholder{
+  width: 130px;
+  height: 20px;
+  font-family: 'Inter';
+  font-weight: 500;
+  font-size: 16px;
+  line-height:16px;
+  color: #C3C1E5;
+}
+.dark .inputModal::placeholder {
+  color: #666666;
+}
+/* Botão do Modal */
+.divBotaoModal{
+  display: flex;
+  justify-content: space-between;
+}
+.cancel{
+  font-family: 'Kanit';
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 18px;
+  width: 110px;
+  height: 38px;
+  border-radius: 5px;
+  border: #6C63FF solid 1px;
+  background-color: white;
+  color: #6C63FF;
+  padding: 10px, 22px, 10px, 22px;
+  margin-top: 100px;
+}
+.dark .cancel {
+  background: #252525;
+}
+.cancel:hover{
+  background-color: #c6c6c6;
+}
+.dark .cancel:hover {
+  background: #6C63FF;
+  color: white;
+}
+.apply{
+  font-family: 'Kanit';
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 18px;
+  width: 97px;
+  height: 38px;
+  border-radius: 5px;
+  border: #6C63FF solid 1px;
+  background-color: #6C63FF;
+  color: white;
+  padding: 10px, 22px, 10px, 22px;
+  margin-top: 100px;
+}
+.apply:hover{
+  background-color: #534CC2;
+}
+
+/* Filter Button*/
+.filterButton{
+  display: grid;
+  width: 82px;
+  height: 84px;
+  border-radius: 5px;
+  border: 1px solid #6C63FF;
+  justify-self: end;
+}
+.filter {
+  background: white;
+  cursor: pointer;
+  border: none;
+  color: #6C63FF;
+  z-index: 0;
+}
+.filter:hover {
+  background: #6C63FF33;
+}
+.filter1 {
+  border-radius: 5px 5px 0px 0px;
+}
+.filter3 {
+  border-radius: 0px 0px 5px 5px;
+}
+
+@media(max-width: 800px) {
+  .containerPrincipal{
+    width: 783px;
+    height: 800px;
+    justify-self: center;
+  }
+  .container {
+    width: 783px;
+    justify-content: center;
+  }
+  .containerForm{
+    width: 783px;
+    justify-content: center;
+  }
+  .search{
+    width: 500px;
+  }
+  .containerBody{
+    width: 630px;
+  }
+  .containerList{
+    width: 520px;
+  }
+  .list {
+    width: 520px;
+  }
+  .containerModalDentro{
+    width: 430px;
+  }
+  .inputModal {
+    width: 390px;
+  }
+}
+
+@media (max-width: 500px) {
+  .containerPrincipal {
+    width: 412px;
+    height: 914px;
+    justify-self: center;
+  }
+  .container {
+    width: 400px;
+    margin-bottom: 20px;
+    justify-content: center;
+  }
+  .titulo {
+    font-size: 22px;
+  }
+  .containerForm {
+    width: 400px;
+    height: 30px;
+    justify-content: center;
+  }
+  .searchContainer {
+    height: 30px;
+  }
+  .search {
+    width: 220px;
+    height: 26px;
+    font-size: 11px;
+    font-family: 'Kanit';
+  }
+  .search::placeholder {
+    align-self: center;
+    font-size: 12px;
+    height: 15px;
+  }
+  .lupa {
+    width: 18px;
+    height: 18px;
+  }
+  .all {
+    width: 70px;
+    height: 30px;
+    align-items: center;
+    font-size: 16px;
+  }
+  .arrowDown {
+    top: 13px;
+  }
+  .noturno {
+    width: 30px;
+    height: 30px;
+    align-self: center;
+  }
+  .moon, .sun {
+    align-content: center;
+    width: 15px;
+    height: 15px;
+  }
+  button[data-filter='Incomplete'] {
+    width: 113px;
+  }
+  button[data-filter='Done'] {
+    width: 75px;
+  }
+  .filterButton {
+    width: 68px;
+    justify-self: end;
+  }
+  .filter {
+    width: 68px;
+    font-size: 10px;
+  }
+  .containerBody {
+    width: 300px;
+  }
+  .containerList {
+    width: 350px;
+  }
+  .list {
+    width: 350px;
+  }
+  .checkbox {
+    width: 16px;
+    height: 16px;
+  }
+  .form {
+    width: 40px;
+    height: 40px;
+  }
+  .containerModalDentro {
+    width: 330px;
+    height: 240px;
+  }
+  .modalTitulo {
+    font-size: 22px;
+    margin-bottom: 15px;
+  }
+  .inputModal {
+    width: 300px;
+    height: 30px;
+  }
+  .inputModal::placeholder {
+    font-size: 12px;
+  }
+  .velinho {
+    width: 200px;
+    height: 250px;
+  }
+  .empty {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 375px) {
+  .containerPrincipal {
+    width: 375px;
+  }
+  .container {
+    width: 375px;
+  }
+  .containerForm {
+    width: 375px;
+  }
+  .titulo {
+    font-size: 20px;
+  }
+  .search {
+    width: 200px;
+  }
+  .lupa {
+    width: 14px;
+  }
+  .all {
+    width: 60px;
+    font-size: 13px;
+  }
+  button[data-filter='Incomplete'] {
+    width: 100px;
+  }
+  button[data-filter='Done'] {
+    width: 68px;
+  }
+  .containerBody {
+    width: 320px;
+  }
+  .containerList {
+    width: 320px;
+  }
+  .containerList span {
+    font-size: 12px;
+  }
+  .velinho {
+    width: 180px;
+    height: 230px;
+  }
+  .list {
+    width: 312px;
+  }
+  .checkbox {
+    width: 13px;
+    height: 13px;
+  }
+  .inputEdit {
+    width: 200px;
+    font-size: 12px;
+  }
+  .edit {
+    width: 14px;
+  }
+  .delete {
+    width: 16px;
+  }
+  .empty {
+    font-size: 14px;
+  }
+  .plus {
+    width: 18px;
+  }
+  .form {
+    width: 35px;
+    height: 35px;
+  }
+  .containerModalDentro{
+    width: 270px;
+    height: 180px;
+  }
+  .modalTitulo {
+    font-size: 18px;
+  }
+  .inputModal {
+    width: 240px;
+  }
+  .inputModal::placeholder {
+    font-size: 12px;
+  }
+  .cancel,.apply {
+    width: 70px;
+    height: 30px;
+    font-size: 14px;
+    margin-top: 50px;
+  } 
+}
