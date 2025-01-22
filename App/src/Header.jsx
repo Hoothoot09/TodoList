@@ -71,29 +71,27 @@ const Header = ({ todoList, setDisplayedList, setSearch, theme, setTheme }) => {
     <div className="container">
       <h1 className="titulo">TODO LIST</h1>
       <div className="containerForm">
-        <form action="search">
-          <div className="searchContainer">
-            <input
-              onChange={({ target }) => setSearch(target.value)}
-              className="search"
-              type="text"
-              placeholder="Search note..."
+        <div className="searchContainer">
+          <input
+            onChange={({ target }) => setSearch(target.value)}
+            className="search"
+            type="text"
+            placeholder="Search note..."
+          />
+          {theme === 'light' ? (
+            <img
+              className="lupa"
+              src={MagnifyingGlass}
+              alt="magnifying glass"
             />
-            {theme === 'light' ? (
-              <img
-                className="lupa"
-                src={MagnifyingGlass}
-                alt="magnifying glass"
-              />
-            ) : (
-              <img
-                className="lupa"
-                src={MagnifyingGlassWhite}
-                alt="MagnifyingGlassWhite"
-              />
-            )}
-          </div>
-        </form>
+          ) : (
+            <img
+              className="lupa"
+              src={MagnifyingGlassWhite}
+              alt="MagnifyingGlassWhite"
+            />
+          )}
+        </div>
         <div ref={menuRef} className="containerButtonAll" onClick={handleClick}>
           <button
             data-filter={filter}

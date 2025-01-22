@@ -62,7 +62,7 @@ const Body = ({
   console.log('displayedList: ', displayedList);
 
   return (
-    <div className="containerBody">
+    <div className="container">
       {displayedList.length > 0 ? (
         displayedList
           .filter((task) => {
@@ -120,7 +120,7 @@ const Body = ({
           <span className="empty">Empty...</span>
         </>
       )}
-      <button className="form" onClick={() => setShowModal(true)}>
+      <button className="addButtom" onClick={() => setShowModal(true)}>
         <img src={Plus} alt="plus" />
       </button>
     </div>

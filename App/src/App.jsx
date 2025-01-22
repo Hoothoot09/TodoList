@@ -24,7 +24,7 @@ const App = () => {
         setSearch={setSearch}
         setTheme={setTheme}
       />
-      <Modal
+      {/* <Modal
         setShowModal={setShowModal}
         showModal={showModal}
         setTodoList={setTodoList}
@@ -43,7 +43,7 @@ const App = () => {
         setEdit={setEdit}
         inputValue={inputValue}
         setInputValue={setInputValue}
-      />
+      /> */}
     </div>
   );
 };

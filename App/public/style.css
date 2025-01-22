@@ -1,15 +1,25 @@
 body {
   margin: 0;
 }
+.containerPrincipal{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  padding: 20px;
+}
 /* Container Header*/
 .container{
-  display: grid;
+  display: flex;
+  flex-direction: column;
   justify-items: center;
-  justify-self: center;
+  align-items: center;
   margin-bottom: 40px;
-  padding: 40px 0px 0px 0px;
-  width: 750px;
-  height: 135px;
+  width: 100%;
+  max-width: 750px;
+  min-width: 280px;
   z-index: 0;
 }
 /* Titulo Header*/
@@ -18,7 +28,6 @@ body {
   font-family: 'Kanit';
   font-weight: 500;
   font-size: 1.5rem;
-  width: 122px;
   height: 39px;
   line-height: 38.87px;
   color: #252525;
@@ -29,23 +38,20 @@ body {
 /* Container Form*/
 .containerForm{
   justify-items: center;
-  gap: 16px;
+  gap: 8px;
+  width: 100%;
   display: flex;
-  margin: 0 auto;
-  width: 750px;
   height: 38px;
 }
 /* Pesquisa */
 .search{
   display: flex;
-  width: 595px;
+  width: 100%;
   height: 38px;
   border-radius: 5px;
   border: #6C63FF solid 1px;
   padding: 8px, 16px, 8px, 16px;
-  gap: 436px;
   outline: #6C63FF;
-  background: url('/App/img/Vector.png');
   font-family: 'Kanit';
 }
 .dark .search {
@@ -62,6 +68,8 @@ body {
   transform: translateY(-50%);
 }
 .searchContainer{
+  display: flex;
+  width: 100%;
   position: relative;
 }
 .dark .searchContainer input {
@@ -90,7 +98,9 @@ button[data-filter='Incomplete'] {
 .all{
   display: flex;
   color: white;
-  width: 85px;
+  max-width: 85px;
+  width: 100%;
+  min-width: 60px;
   border: #6C63FF solid 1px;
   padding: 10px;
   font-family: 'Kanit';
@@ -126,21 +136,9 @@ button[data-filter='Incomplete'] {
 }
 .dark {
   background: #333;
-  margin: 0px;
-  padding: 0px;
-  max-width: 100%;
   color: white;
 }
 /* Container Body */
-.containerBody{
-  display: flex;
-  flex-direction: column;
-  justify-items: center;
-  width: 750px;
-  height: 575px;
-  margin: 0 auto;
-  gap: 30px;
-}
 .velinho {
   display: flex;
   align-self: center;
@@ -224,7 +222,10 @@ width: 520px;
   stroke: #6C63FF;
 }
 /* Botao do Form */
-.form{
+.addButtom{
+  position: fixed;
+  bottom: 24px;
+  right: 16px;
   border: #6C63FF solid 1px;
   width: 50px;
   height: 50px;
@@ -233,7 +234,7 @@ width: 520px;
   background-color: #6C63FF;
   align-self: end;
 }
-.form:hover{
+.addButtom:hover{
   background:#534CC2;
 }
 /* Container modal Fora*/
@@ -378,359 +379,4 @@ width: 520px;
 }
 .filter3 {
   border-radius: 0px 0px 5px 5px;
-}
-
-@media(max-width: 800px) {
-  .containerPrincipal{
-    width: 800px;
-    height: auto;
-    justify-self: center;
-  }
-  .container {
-    width: 750px;
-    justify-content: center;
-  }
-  .containerForm{
-    width: 750px;
-    justify-content: center;
-  }
-  .search{
-    width: 500px;
-  }
-  .containerBody{
-    width: 630px;
-  }
-  .containerList{
-    width: 520px;
-  }
-  .list {
-    width: 520px;
-  }
-  .containerModalDentro{
-    width: 430px;
-  }
-  .inputModal {
-    width: 390px;
-  }
-}
-@media (max-width: 750px) {
-  .containerPrincipal {
-    width: 750px;
-  }
-  .container {
-    width: 650px;
-  }
-  .containerForm {
-    width: 650px;
-  }
-  .searchContainer {
-    width: 450px;
-  }
-  .search {
-    width: 450px;
-  }
-  button[data-filter='Incomplete'] {
-    font-size: 15px;
-    width: 110px;
-  }
-  .containerBody {
-    width: 600px;
-  }
-  .containerModalDentro {
-    width: 400px;
-    height: 260px;
-  }
-  .inputModal {
-    width: 370px;
-  }
-  .inputModal::placeholder {
-    font-size: 14px;
-  }
-  .cancel, .apply {
-    margin-top: 90px;
-    font-size: 16px;
-  }
-}
-@media (max-width: 650px) {
-  .containerPrincipal {
-    width: 650px;
-  }
-  .container {
-    width: 600px;
-  }
-  .containerForm {
-    width: 600px;
-  }
-  .searchContainer {
-    width: 400px;
-  }
-  .search {
-    width: 400px;
-  }
-}
-@media (max-width: 600px) {
-  .containerPrincipal {
-    width: 600px;
-  }
-  .container {
-    width: 550px;
-  }
-  .containerForm {
-    width: 550px;
-  }
-  .searchContainer {
-    width: 400px;
-  }
-  .search {
-    width: 400px;
-  }
-  .containerBody {
-    width: 550px;
-  }
-  .containerList, .list {
-    width: 480px;
-  }
-  .checkbox {
-    width: 15px;
-    height: 15px;
-  }
-  .checked span {
-    font-size: 16px;
-  }
-}
-@media (max-width: 550px) {
-  .containerPrincipal {
-    width: 550px;
-  }
-  .container {
-    width: 500px;
-  }
-  .containerForm {
-    width: 500px;
-  }
-  .searchContainer {
-    width: 360px;
-  }
-  .search {
-    width: 360px;
-  }
-  .containerBody {
-    width: 470px;
-  }
-  .containerModalDentro {
-    width: 360px;
-    height: 260px;
-  }
-  .inputModal {
-    width: 330px;
-  }
-  .cancel, .apply {
-    font-size: 14px;
-    width: 80px;
-    height: 35px;
-    margin-top: 90px;
-  }
-}
-@media (max-width: 500px) {
-  .containerPrincipal {
-    width: 500px;
-  }
-  .container {
-    width: 400px;
-  }
-  .titulo {
-    font-size: 22px;
-  }
-  .containerForm {
-    width: 400px;
-  }
-  .searchContainer {
-    width: 300px;
-  }
-  .search {
-    width: 300px;
-    height: 26px;
-    font-size: 11px;
-  }
-  .all {
-    width: 70px;
-    height: 30px;
-    align-items: center;
-    font-size: 16px;
-  }
-  .arrowDown {
-    top: 13px;
-  }
-  .noturno {
-    width: 30px;
-    height: 30px;
-    align-self: center;
-  }
-  .lua, .sol {
-    align-content: center;
-    width: 15px;
-    height: 15px;
-  }
-  button[data-filter='Incomplete'] {
-    width: 113px;
-  }
-  button[data-filter='Done'] {
-    width: 75px;
-  }
-  .filterButton {
-    width: 68px;
-    justify-self: end;
-  }
-  .filter {
-    width: 68px;
-    font-size: 10px;
-  }
-  .containerBody {
-    width: 300px;
-  }
-  .containerList {
-    width: 350px;
-  }
-  .list {
-    width: 350px;
-  }
-  .checkbox {
-    width: 16px;
-    height: 16px;
-  }
-  .form {
-    width: 40px;
-    height: 40px;
-  }
-  .containerModalDentro {
-    width: 330px;
-    height: 240px;
-  }
-  .modalTitulo {
-    font-size: 22px;
-    margin-bottom: 15px;
-  }
-  .inputModal {
-    width: 300px;
-    height: 30px;
-  }
-  .inputModal::placeholder {
-    font-size: 12px;
-  }
-  .velinho {
-    width: 200px;
-    height: 250px;
-  }
-  .empty {
-    font-size: 16px;
-  }
-}
-@media (max-width: 430px) {
-  .containerPrincipal {
-    width: 430px;
-  }
-  .container {
-    width: 375px;
-  }
-  .containerForm {
-    width: 350px;
-  }
-  .searchContainer {
-    width: 306px;
-  }
-  .search {
-    width: 306px;
-  }
-  .containerButtonAll {
-    height: 30px;
-  }
-}
-@media (max-width: 375px) {
-  .containerPrincipal {
-    width: 375px;
-  }
-  .container {
-    width: 375px;
-  }
-  .containerForm {
-    width: 375px;
-  }
-  .titulo {
-    font-size: 20px;
-  }
-  .search {
-    width: 200px;
-  }
-  .lupa {
-    width: 14px;
-  }
-  .all {
-    width: 60px;
-    font-size: 13px;
-  }
-  button[data-filter='Incomplete'] {
-    width: 100px;
-  }
-  button[data-filter='Done'] {
-    width: 68px;
-  }
-  .containerBody {
-    width: 320px;
-  }
-  .containerList {
-    width: 320px;
-  }
-  .containerList span {
-    font-size: 12px;
-  }
-  .velinho {
-    width: 180px;
-    height: 230px;
-  }
-  .list {
-    width: 312px;
-  }
-  .checkbox {
-    width: 13px;
-    height: 13px;
-  }
-  .inputEdit {
-    width: 200px;
-    font-size: 12px;
-  }
-  .edit {
-    width: 14px;
-  }
-  .delete {
-    width: 16px;
-  }
-  .empty {
-    font-size: 14px;
-  }
-  .plus {
-    width: 18px;
-  }
-  .form {
-    width: 35px;
-    height: 35px;
-  }
-  .containerModalDentro{
-    width: 270px;
-    height: 180px;
-  }
-  .modalTitulo {
-    font-size: 18px;
-  }
-  .inputModal {
-    width: 240px;
-  }
-  .inputModal::placeholder {
-    font-size: 12px;
-  }
-  .cancel,.apply {
-    width: 70px;
-    height: 30px;
-    font-size: 14px;
-    margin-top: 50px;
-  } 
 }
