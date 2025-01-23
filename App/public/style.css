@@ -156,6 +156,7 @@ button[data-filter='Done'] {
 }
 .dark {
   background: #333;
+  padding: 0px;
   color: white;
 }
 /* Container Body */
