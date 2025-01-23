@@ -1,4 +1,6 @@
+@import '../src/Hearder.module.css';
 @import '../src/Body.module.css';
+
 html, body {
   padding: 0px;
   margin: 0;
@@ -21,114 +23,6 @@ form {
   height: 100vh;
   overflow: auto;
   flex-grow: 1;
-}
-/* Container Body */
-.detective {
-  display: flex;
-  align-self: center;
-}
-.empty {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: Arial;
-  font-weight: 400;
-  font-size: 20px;
-  font-family: 'Kanit';
-  line-height: 20px;
-}
-.listContainer{
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-}
-.listContainer span {
-  margin-left: 10px;
-  font-size: 18px;
-  line-height: 15px;
-}
-.checked {
-  display: flex;
-  align-items: center;
-}
-.checked input {
-  color: #333333;
-  font-family: 'Kanit';
-  outline: none;
-}
-.list {
-justify-items: center;
-align-self: center;
-list-style: none;
-width: 100%;
-}
-.list span {
-  justify-items: center;
-}
-.list:not(:last-child) {
-  border-bottom: #6C63FFA1 solid 1px;
-  border-radius: 2px;
-}
-.checkbox {
-  width: 23px;
-  height: 23px;
-  accent-color: #6c63ff;
-}
-.checkbox:checked ~.task {
-  text-decoration: line-through;
-  color: gray;
-}
-.editInput{
-  width: 100%;
-  border: #6C63FF solid 1px;
-  border-radius: 3px;
-}
-.editInput::placeholder {
-  font-family: 'Inter';
-  font-size: 13px;
-  color: #C3C1E5;
-}
-/* Botões da lista*/
-.btnDelete {
-  border: none;
-  background: none;
-}
-.delete{
-  cursor: pointer;
-}
-.delete:hover path {
-  stroke: red
-}
-.btnEdit {
-  background: none;
-  border: none;
-}
-.edit {
-  cursor: pointer;
-}
-.edit:hover path {
-  stroke: #6C63FF;
-}
-/* Botao do Form */
-.addButtom{
-  position: fixed;
-  bottom: 35px;
-  right: 20px;
-  border: #6C63FF solid 1px;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  cursor: pointer;
-  background-color: #6C63FF;
-  align-self: end;
-}
-.addButtom:hover{
-  background:#534CC2;
-}
-.plus {
-  position: absolute;
-  top: 12px;
-  left: 12px;
 }
 /* Container modal Fora*/
 .outsideModalContainer {
@@ -265,30 +159,4 @@ width: 100%;
 }
 .apply:hover{
   background-color: #534CC2;
-}
-
-/* Filter Button*/
-.filterButton{
-  display: grid;
-  position: relative;
-  width: 100%;
-  max-width: 80px;
-  height: 84px;
-  border-radius: 5px;
-  border: 1px solid #6C63FF;
-  justify-self: end;
-  z-index: 10;
-  overflow: hidden;
-}
-.filter {
-  background: white;
-  cursor: pointer;
-  border: none;
-  color: #6C63FF;
-  z-index: 30;
-}
-
-.filter:hover {
-  background: #6C63FF;
-  color: white;
 }

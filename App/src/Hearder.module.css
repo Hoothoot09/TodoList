@@ -136,3 +136,28 @@ button[data-filter='Incomplete'] {
   padding: 0px;
   color: white;
 }
+/* Filter Button*/
+.filterButton{
+  display: grid;
+  position: relative;
+  width: 100%;
+  max-width: 80px;
+  height: 84px;
+  border-radius: 5px;
+  border: 1px solid #6C63FF;
+  justify-self: end;
+  z-index: 10;
+  overflow: hidden;
+}
+.filter {
+  background: white;
+  cursor: pointer;
+  border: none;
+  color: #6C63FF;
+  z-index: 30;
+}
+
+.filter:hover {
+  background: #6C63FF;
+  color: white;
+}

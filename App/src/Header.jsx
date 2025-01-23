@@ -5,6 +5,7 @@ import MagnifyingGlassWhite from '../img/lupa branca.svg?react';
 import ArrowDown from '../img/arrow down.svg?react';
 import Moon from '../img/lua.svg?react';
 import Sun from '../img/sol.svg?react';
+import './Header.module.css';
 
 const Header = ({ todoList, setDisplayedList, setSearch, theme, setTheme }) => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
