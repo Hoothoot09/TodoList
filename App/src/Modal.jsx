@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useRef } from 'react';
 
 const Modal = ({ setShowModal, showModal, setTodoList, inputValue }) => {
   const [title, setTitle] = React.useState('');
+  const modalRef = useRef();
+
   const onSubmit = React.useCallback(
     (event) => {
       event.preventDefault();
@@ -12,13 +14,25 @@ const Modal = ({ setShowModal, showModal, setTodoList, inputValue }) => {
     [title],
   );
 
+  React.useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (modalRef.current && !modalRef.current.contains(event.target)) {
+        setShowModal(false);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [setShowModal]);
+
   React.useEffect(() => console.log(title), [title]);
   if (!showModal) return null;
 
   return (
     <>
       <div className="containerModalFora" />
-      <div className="containerModalDentro">
+      <div ref={modalRef} className="containerModalDentro">
         <h1 className="modalTitulo">NEW NOTE</h1>
         <form onSubmit={onSubmit}>
           <input
