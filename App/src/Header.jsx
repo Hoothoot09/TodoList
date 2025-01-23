@@ -107,13 +107,13 @@ const Header = ({ todoList, setDisplayedList, setSearch, theme, setTheme }) => {
           </button>
           {isMenuOpen && (
             <div className="filterButton">
-              <button className="filter filter1" onClick={handleShowAll}>
+              <button className="filter" onClick={handleShowAll}>
                 All
               </button>
               <button className="filter" onClick={handleIncomplete}>
                 Incomplete
               </button>
-              <button className="filter filter3" onClick={handleDone}>
+              <button className="filter" onClick={handleDone}>
                 Done
               </button>
             </div>

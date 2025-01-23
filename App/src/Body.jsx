@@ -86,7 +86,10 @@ const Body = ({
                           defaultValue={item.title}
                         />
                       ) : (
-                        <span onClick={() => handleEditClick(index)}>
+                        <span
+                          className="task"
+                          onClick={() => handleEditClick(index)}
+                        >
                           {item.title}
                         </span>
                       )}
@@ -113,15 +116,15 @@ const Body = ({
       ) : (
         <>
           {theme === 'light' ? (
-            <img className="velinho" src={Detective} alt="detective" />
+            <img className="detective" src={Detective} alt="detective" />
           ) : (
-            <img className="velinho" src={Detective} alt="detective" />
+            <img className="detective" src={Detective} alt="detective" />
           )}
           <span className="empty">Empty...</span>
         </>
       )}
       <button className="addButtom" onClick={() => setShowModal(true)}>
-        <img src={Plus} alt="plus" />
+        <img className="plus" src={Plus} alt="plus" />
       </button>
     </div>
   );

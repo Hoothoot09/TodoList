@@ -1,14 +1,23 @@
 body {
   margin: 0;
 }
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  width: calc(100% - 40px);
+  max-width: 500px;
+  min-width: 280px;
+  margin: 0 auto;
+}
 .containerPrincipal{
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100vw;
   height: 100vh;
-  overflow: hidden;
-  padding: 20px;
+  overflow: auto;
 }
 /* Container Header*/
 .container{
@@ -16,11 +25,10 @@ body {
   flex-direction: column;
   justify-items: center;
   align-items: center;
-  margin-bottom: 40px;
-  width: 100%;
+  margin: 0 auto 40px;
+  width: calc(100% - 40px);
   max-width: 750px;
   min-width: 280px;
-  z-index: 0;
 }
 /* Titulo Header*/
 .titulo{
@@ -54,28 +62,8 @@ body {
   outline: #6C63FF;
   font-family: 'Kanit';
 }
-.dark .search {
-  border: 1px solid white;
-}
-.dark .search::placeholder {
-  color: #666666;
-  font-family: 'Inter';
-}
-.lupa {
-  position: absolute;
-  right: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-}
-.searchContainer{
-  display: flex;
-  width: 100%;
-  position: relative;
-}
-.dark .searchContainer input {
-  color: #DDDDDD;
-}
-input::placeholder {
+.search input::placeholder {
+  align-content: center;
   font-family: 'Inter';
   font-weight: 500;
   font-size: 16px;
@@ -83,10 +71,39 @@ input::placeholder {
   color: #C3C1E5;
   width: 106px;
   height: 16px;
+  overflow: hidden;
+}
+.dark .search {
+  border: 1px solid white;
+  background: #333333;
+}
+.dark .search::placeholder {
+  color: #666666;
+  font-family: 'Inter';
+}
+.lupa {
+  align-self: center;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.searchContainer{
+  display: flex;
+  width: 50%;
+  position: relative;
+}
+.dark .searchContainer input {
+  color: #DDDDDD;
 }
 /* Botao ALL */
 button[data-filter='Incomplete'] {
-  width: 130px;
+  width: 103px;
+  max-width: 130px;
+  min-width: 70px;
+  font-size: 14px;
+}
+button[data-filter='Done'] {
+  width: 90px;
 }
 .containerButtonAll{
   position: relative;
@@ -134,14 +151,18 @@ button[data-filter='Incomplete'] {
 .noturno:hover{
   background: #534CC2;
 }
+.lua, .sol {
+  display: block;
+}
 .dark {
   background: #333;
   color: white;
 }
 /* Container Body */
-.velinho {
+.detective {
   display: flex;
   align-self: center;
+  margin-bottom: 60px;
 }
 .empty {
   display: flex;
@@ -156,7 +177,7 @@ button[data-filter='Incomplete'] {
 .containerList{
   display: flex;
   justify-content: space-between;
-  width: 520px;
+  width: 100%;
 }
 .containerList span {
   margin-left: 10px;
@@ -176,7 +197,7 @@ button[data-filter='Incomplete'] {
 justify-items: center;
 align-self: center;
 list-style: none;
-width: 520px;
+width: 100%;
 }
 .list span {
   justify-items: center;
@@ -190,8 +211,12 @@ width: 520px;
   height: 23px;
   accent-color: #6c63ff;
 }
+.checkbox:checked ~.task {
+  text-decoration: line-through;
+  color: gray;
+}
 .inputEdit{
-  width: 300px;
+  width: 100%;
   border: #6C63FF solid 1px;
   border-radius: 3px;
 }
@@ -225,7 +250,7 @@ width: 520px;
 .addButtom{
   position: fixed;
   bottom: 24px;
-  right: 16px;
+  right: 20px;
   border: #6C63FF solid 1px;
   width: 50px;
   height: 50px;
@@ -239,24 +264,41 @@ width: 520px;
 }
 /* Container modal Fora*/
 .containerModalFora {
-  display: grid;
-  justify-items: center;
-  align-items: center;
+  z-index: 10;
+  position: fixed;
+  inset: 0;
+  background: #00000070;
+  backdrop-filter: blur(4px);
 }
 /* Container Modal Dentro*/
 .containerModalDentro{
-  z-index: 2;
+  z-index: 20;
   position: fixed;
-  top: 154px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   justify-items: center;
   background: white;
-  width: 500px;
-  height: 289px;
+  width: 100%;
+  max-width: 500px;
+  max-height: 289px;
   border-radius: 16px;
   border: #252525 solid 1px;
 }
-.containerModalDentro.ativo{
-  display: grid;
+@media (max-width: 320px) {
+  .containerModalDentro {
+  z-index: 20;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  justify-items: center;
+  background: white;
+  width: 100%;
+  max-height: 289px;
+  border-radius: 16px;
+  border: #252525 solid 1px;
+ }
 }
 .dark .containerModalDentro {
   background: #252525;
@@ -284,7 +326,7 @@ width: 520px;
 }
 /* Input do Modal*/
 .inputModal{
-  width: 440px;
+  width: 100%;
   height: 38px;
   padding: 8px, 16px, 8px, 16px;
   border-radius: 5px;
@@ -311,6 +353,9 @@ width: 520px;
 /* Botão do Modal */
 .divBotaoModal{
   display: flex;
+  padding: 20px;
+  gap: 10px;
+  width: 100%;
   justify-content: space-between;
 }
 .cancel{
@@ -358,25 +403,25 @@ width: 520px;
 /* Filter Button*/
 .filterButton{
   display: grid;
-  width: 82px;
+  position: relative;
+  width: 100%;
+  max-width: 80px;
   height: 84px;
   border-radius: 5px;
   border: 1px solid #6C63FF;
   justify-self: end;
+  z-index: 10;
+  overflow: hidden;
 }
 .filter {
   background: white;
   cursor: pointer;
   border: none;
   color: #6C63FF;
-  z-index: 0;
+  z-index: 30;
 }
+
 .filter:hover {
-  background: #6C63FF33;
-}
-.filter1 {
-  border-radius: 5px 5px 0px 0px;
-}
-.filter3 {
-  border-radius: 0px 0px 5px 5px;
+  background: #6C63FF;
+  color: white;
 }

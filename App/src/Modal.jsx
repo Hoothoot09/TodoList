@@ -16,7 +16,8 @@ const Modal = ({ setShowModal, showModal, setTodoList }) => {
   if (!showModal) return null;
 
   return (
-    <div className="containerModalFora">
+    <>
+      <div className="containerModalFora" />
       <div className="containerModalDentro">
         <h1 className="modalTitulo">NEW NOTE</h1>
         <form onSubmit={onSubmit}>
@@ -41,7 +42,7 @@ const Modal = ({ setShowModal, showModal, setTodoList }) => {
           </div>
         </form>
       </div>
-    </div>
+    </>
   );
 };
 
