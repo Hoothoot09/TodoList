@@ -1,10 +1,7 @@
-html {
+html, body {
   padding: 0px;
   margin: 0;
   height: 100%;
-}
-body {
-  margin: 0;
 }
 form {
   display: flex;
