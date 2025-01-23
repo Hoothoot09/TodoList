@@ -23,6 +23,7 @@ form {
   width: 100vw;
   height: 90vh;
   overflow: auto;
+  flex: 1;
 }
 /* Container Header*/
 .container{
