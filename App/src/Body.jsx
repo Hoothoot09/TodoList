@@ -80,6 +80,7 @@ const Body = ({
                           ref={inputRef}
                           onChange={handleInputChange}
                           onKeyDown={handleKeyDown}
+                          onBlur={() => setEdit(false)}
                           className="inputEdit"
                           placeholder="Edit your task..."
                           type="text"
