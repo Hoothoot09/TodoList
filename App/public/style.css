@@ -100,13 +100,7 @@ form {
 }
 /* Botao ALL */
 button[data-filter='Incomplete'] {
-  width: 103px;
-  max-width: 130px;
-  min-width: 70px;
   font-size: 14px;
-}
-button[data-filter='Done'] {
-  width: 90px;
 }
 .containerButtonAll{
   position: relative;
@@ -118,7 +112,7 @@ button[data-filter='Done'] {
 .all{
   display: flex;
   color: white;
-  max-width: 85px;
+  max-width: 110px;
   width: 100%;
   min-width: 60px;
   border: #6C63FF solid 1px;
@@ -136,6 +130,11 @@ button[data-filter='Done'] {
 }
 .all:hover{
   background: #534CC2;
+}
+@media (max-width: 320px) {
+  .all {
+    width: 105px;
+  }
 }
 .arrowDown {
   position: absolute;
