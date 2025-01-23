@@ -1,4 +1,5 @@
 import React, { useRef } from 'react';
+import './Modal.module.css';
 
 const Modal = ({ setShowModal, showModal, setTodoList, inputValue }) => {
   const [title, setTitle] = React.useState('');

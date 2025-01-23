@@ -1,0 +1,136 @@
+/* Container modal Fora*/
+.outsideModalContainer {
+  z-index: 10;
+  position: fixed;
+  inset: 0;
+  background: #00000070;
+  backdrop-filter: blur(4px);
+}
+/* Container Modal Dentro*/
+.modalInnerContainer{
+  z-index: 20;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  justify-items: center;
+  background: white;
+  width: 100%;
+  max-width: 500px;
+  max-height: 289px;
+  border-radius: 16px;
+  border: #252525 solid 1px;
+}
+@media (max-width: 320px) {
+  .modalInnerContainer {
+  z-index: 20;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  justify-items: center;
+  background: white;
+  width: 100%;
+  max-height: 289px;
+  border-radius: 16px;
+  border: #252525 solid 1px;
+ }
+}
+.dark .modalInnerContainer {
+  background: #252525;
+  border: 1px solid white;
+}
+.dark .modalInnerContainer input {
+  color: #DDDDDD;
+  font-family: 'Kanit';
+}
+/* Titulo do Modal*/
+.titleModal{
+  margin-bottom: 0;
+  text-align: center;
+  height: 24px;
+  font-family: 'Kanit';
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 24px;
+  color: #252525;
+  margin-bottom: 30px;
+}
+.dark .titleModal {
+  color: white;
+}
+/* Input do Modal*/
+.modalInput{
+  width: 100%;
+  height: 38px;
+  padding: 8px, 16px, 8px, 16px;
+  border-radius: 5px;
+  border: #6C63FF solid 1px;
+  gap: 436px;
+  outline: #6C63FF;
+}
+.dark .modalInput{
+  background: #252525;
+  border: 1px solid white;
+}
+.modalInput::placeholder{
+  width: 130px;
+  height: 20px;
+  font-family: 'Inter';
+  font-weight: 500;
+  font-size: 16px;
+  line-height:16px;
+  color: #C3C1E5;
+}
+.dark .modalInput::placeholder {
+  color: #666666;
+}
+/* Botão do Modal */
+.modalButtons{
+  display: flex;
+  padding: 20px;
+  gap: 10px;
+  width: 100%;
+  justify-content: space-between;
+}
+.cancel{
+  font-family: 'Kanit';
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 18px;
+  width: 110px;
+  height: 38px;
+  border-radius: 5px;
+  border: #6C63FF solid 1px;
+  background-color: white;
+  color: #6C63FF;
+  padding: 10px, 22px, 10px, 22px;
+  margin-top: 100px;
+}
+.dark .cancel {
+  background: #252525;
+}
+.cancel:hover{
+  background-color: #c6c6c6;
+}
+.dark .cancel:hover {
+  background: #6C63FF;
+  color: white;
+}
+.apply{
+  font-family: 'Kanit';
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 18px;
+  width: 97px;
+  height: 38px;
+  border-radius: 5px;
+  border: #6C63FF solid 1px;
+  background-color: #6C63FF;
+  color: white;
+  padding: 10px, 22px, 10px, 22px;
+  margin-top: 100px;
+}
+.apply:hover{
+  background-color: #534CC2;
+}
