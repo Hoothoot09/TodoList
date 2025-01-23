@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Modal = ({ setShowModal, showModal, setTodoList }) => {
+const Modal = ({ setShowModal, showModal, setTodoList, inputValue }) => {
   const [title, setTitle] = React.useState('');
   const onSubmit = React.useCallback(
     (event) => {
@@ -23,7 +23,7 @@ const Modal = ({ setShowModal, showModal, setTodoList }) => {
         <form onSubmit={onSubmit}>
           <input
             onChange={(event) => setTitle(event.target.value)}
-            value={title}
+            value={inputValue}
             className="inputModal"
             type="text"
             placeholder="Input your note..."

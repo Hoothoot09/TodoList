@@ -262,6 +262,11 @@ width: 100%;
 .addButtom:hover{
   background:#534CC2;
 }
+.plus {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+}
 /* Container modal Fora*/
 .containerModalFora {
   z-index: 10;
