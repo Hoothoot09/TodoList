@@ -16,7 +16,7 @@ form {
   flex-direction: column;
   align-items: center;
   width: 100vw;
-  height: 100vh;
+  height: 90vh;
   overflow: auto;
 }
 /* Container Header*/
@@ -162,7 +162,6 @@ button[data-filter='Done'] {
 .detective {
   display: flex;
   align-self: center;
-  margin-bottom: 60px;
 }
 .empty {
   display: flex;
@@ -249,7 +248,7 @@ width: 100%;
 /* Botao do Form */
 .addButtom{
   position: fixed;
-  bottom: 24px;
+  bottom: 35px;
   right: 20px;
   border: #6C63FF solid 1px;
   width: 50px;
