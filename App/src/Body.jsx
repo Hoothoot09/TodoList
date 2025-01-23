@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import '../public/style.css';
+import './Body.module.css';
 import Detective from '../img/Detective-check-footprint 1.svg?react';
 import Plus from '../img/plus.svg?react';
 import Trash from '../img/trash-svgrepo-com 1.svg?react';
