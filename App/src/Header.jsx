@@ -69,8 +69,8 @@ const Header = ({ todoList, setDisplayedList, setSearch, theme, setTheme }) => {
   }, [isMenuOpen]);
   return (
     <div className="container">
-      <h1 className="titulo">TODO LIST</h1>
-      <div className="containerForm">
+      <h1 className="title">TODO LIST</h1>
+      <div className="formContainer">
         <div className="searchContainer">
           <input
             onChange={({ target }) => setSearch(target.value)}
@@ -80,19 +80,19 @@ const Header = ({ todoList, setDisplayedList, setSearch, theme, setTheme }) => {
           />
           {theme === 'light' ? (
             <img
-              className="lupa"
+              className="magnifyingGlass"
               src={MagnifyingGlass}
               alt="magnifying glass"
             />
           ) : (
             <img
-              className="lupa"
+              className="magnifyingGlass"
               src={MagnifyingGlassWhite}
               alt="MagnifyingGlassWhite"
             />
           )}
         </div>
-        <div ref={menuRef} className="containerButtonAll" onClick={handleClick}>
+        <div ref={menuRef} className="buttonAllContainer" onClick={handleClick}>
           <button
             data-filter={filter}
             className="all"
@@ -119,11 +119,11 @@ const Header = ({ todoList, setDisplayedList, setSearch, theme, setTheme }) => {
             </div>
           )}
         </div>
-        <button className="noturno" onClick={toggleTheme}>
+        <button className="darkMode" onClick={toggleTheme}>
           {theme === 'light' ? (
-            <img className="lua" src={Moon} alt="Moon" />
+            <img className="moon" src={Moon} alt="Moon" />
           ) : (
-            <img className="sol" src={Sun} alt="Sun" />
+            <img className="sun" src={Sun} alt="Sun" />
           )}
         </button>
       </div>

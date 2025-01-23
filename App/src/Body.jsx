@@ -71,7 +71,7 @@ const Body = ({
           .map((item, index) => (
             <li key={index} className="list">
               <>
-                <div className="containerList">
+                <div className="listContainer">
                   <div className="checked">
                     <input className="checkbox" type="checkbox" />
                     <>
@@ -81,7 +81,7 @@ const Body = ({
                           onChange={handleInputChange}
                           onKeyDown={handleKeyDown}
                           onBlur={() => setEdit(false)}
-                          className="inputEdit"
+                          className="editInput"
                           placeholder="Edit your task..."
                           type="text"
                           defaultValue={item.title}

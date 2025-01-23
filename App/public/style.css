@@ -12,7 +12,7 @@ form {
   min-width: 280px;
   margin: 0 auto;
 }
-.containerPrincipal{
+.mainContainer{
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -33,7 +33,7 @@ form {
   min-width: 280px;
 }
 /* Titulo Header*/
-.titulo{
+.title{
   text-align: center;
   font-family: 'Kanit';
   font-weight: 500;
@@ -42,11 +42,11 @@ form {
   line-height: 38.87px;
   color: #252525;
 }
-.dark .titulo {
+.dark .title {
   color: white;
 }
 /* Container Form*/
-.containerForm{
+.formContainer{
   justify-content: center;
   gap: 8px;
   width: 100%;
@@ -81,7 +81,7 @@ form {
   color: #666666;
   font-family: 'Inter';
 }
-.lupa {
+.magnifyingGlass {
   align-self: center;
   position: absolute;
   top: 10px;
@@ -101,10 +101,10 @@ form {
 button[data-filter='Incomplete'] {
   font-size: 14px;
 }
-.containerButtonAll{
+.buttonAllContainer{
   position: relative;
 }
-.containerButtonAll .arrowDown.fixed {
+.buttonAllContainer .arrowDown.fixed {
   transform: rotate(180deg);
   transition: 0.4s;
 }
@@ -141,7 +141,7 @@ button[data-filter='Incomplete'] {
   bottom: 15px;
 }
 /* Botao noturno */
-.noturno{
+.darkMode{
   border: #6C63FF solid 1px;
   width: 38px;
   color: white;
@@ -149,10 +149,10 @@ button[data-filter='Incomplete'] {
   border-radius: 5px;
   cursor: pointer;
 }
-.noturno:hover{
+.darkMode:hover{
   background: #534CC2;
 }
-.lua, .sol {
+.moon, .sun {
   display: block;
 }
 .dark {
@@ -175,12 +175,12 @@ button[data-filter='Incomplete'] {
   font-family: 'Kanit';
   line-height: 20px;
 }
-.containerList{
+.listContainer{
   display: flex;
   justify-content: space-between;
   width: 100%;
 }
-.containerList span {
+.listContainer span {
   margin-left: 10px;
   font-size: 18px;
   line-height: 15px;
@@ -216,12 +216,12 @@ width: 100%;
   text-decoration: line-through;
   color: gray;
 }
-.inputEdit{
+.editInput{
   width: 100%;
   border: #6C63FF solid 1px;
   border-radius: 3px;
 }
-.inputEdit::placeholder {
+.editInput::placeholder {
   font-family: 'Inter';
   font-size: 13px;
   color: #C3C1E5;
@@ -269,7 +269,7 @@ width: 100%;
   left: 12px;
 }
 /* Container modal Fora*/
-.containerModalFora {
+.outsideModalContainer {
   z-index: 10;
   position: fixed;
   inset: 0;
@@ -277,7 +277,7 @@ width: 100%;
   backdrop-filter: blur(4px);
 }
 /* Container Modal Dentro*/
-.containerModalDentro{
+.modalInnerContainer{
   z-index: 20;
   position: fixed;
   top: 50%;
@@ -292,7 +292,7 @@ width: 100%;
   border: #252525 solid 1px;
 }
 @media (max-width: 320px) {
-  .containerModalDentro {
+  .modalInnerContainer {
   z-index: 20;
   position: fixed;
   top: 50%;
@@ -306,16 +306,16 @@ width: 100%;
   border: #252525 solid 1px;
  }
 }
-.dark .containerModalDentro {
+.dark .modalInnerContainer {
   background: #252525;
   border: 1px solid white;
 }
-.dark .containerModalDentro input {
+.dark .modalInnerContainer input {
   color: #DDDDDD;
   font-family: 'Kanit';
 }
 /* Titulo do Modal*/
-.modalTitulo{
+.titleModal{
   margin-bottom: 0;
   text-align: center;
   height: 24px;
@@ -326,11 +326,11 @@ width: 100%;
   color: #252525;
   margin-bottom: 30px;
 }
-.dark .modalTitulo {
+.dark .titleModal {
   color: white;
 }
 /* Input do Modal*/
-.inputModal{
+.modalInput{
   width: 100%;
   height: 38px;
   padding: 8px, 16px, 8px, 16px;
@@ -339,11 +339,11 @@ width: 100%;
   gap: 436px;
   outline: #6C63FF;
 }
-.dark .inputModal{
+.dark .modalInput{
   background: #252525;
   border: 1px solid white;
 }
-.inputModal::placeholder{
+.modalInput::placeholder{
   width: 130px;
   height: 20px;
   font-family: 'Inter';
@@ -352,11 +352,11 @@ width: 100%;
   line-height:16px;
   color: #C3C1E5;
 }
-.dark .inputModal::placeholder {
+.dark .modalInput::placeholder {
   color: #666666;
 }
 /* Botão do Modal */
-.divBotaoModal{
+.modalButtons{
   display: flex;
   padding: 20px;
   gap: 10px;

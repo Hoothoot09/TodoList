@@ -31,18 +31,18 @@ const Modal = ({ setShowModal, showModal, setTodoList, inputValue }) => {
 
   return (
     <>
-      <div className="containerModalFora" />
-      <div ref={modalRef} className="containerModalDentro">
-        <h1 className="modalTitulo">NEW NOTE</h1>
+      <div className="outsideModalContainer" />
+      <div ref={modalRef} className="modalInnerContainer">
+        <h1 className="titleModal">NEW NOTE</h1>
         <form onSubmit={onSubmit}>
           <input
             onChange={(event) => setTitle(event.target.value)}
             value={inputValue}
-            className="inputModal"
+            className="modalInput"
             type="text"
             placeholder="Input your note..."
           />
-          <div className="divBotaoModal">
+          <div className="modalButtons">
             <button
               className="cancel"
               type="button"

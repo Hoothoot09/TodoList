@@ -15,7 +15,7 @@ const App = () => {
   React.useEffect(() => console.log(todoList), [todoList]);
 
   return (
-    <div className={`containerPrincipal ${theme}`}>
+    <div className={`mainContainer ${theme}`}>
       <Header
         theme={theme}
         todoList={todoList}
