@@ -118,6 +118,7 @@ button[data-filter='Incomplete'] {
 }
 /* Button Dark mode */
 .darkMode{
+  position: relative;
   border: #6C63FF solid 1px;
   width: 38px;
   color: white;
@@ -129,7 +130,9 @@ button[data-filter='Incomplete'] {
   background: #534CC2;
 }
 .moon, .sun {
-  justify-content: center;
+  position: absolute;
+  top: 7px;
+  left: 6px;
 }
 .dark {
   background: #333;
