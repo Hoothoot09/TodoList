@@ -120,6 +120,7 @@ button[data-filter='Incomplete'] {
 .darkMode{
   display: flex;
   align-items: center;
+  justify-content: center;
   border: #6C63FF solid 1px;
   width: 38px;
   color: white;
