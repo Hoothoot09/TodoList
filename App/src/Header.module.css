@@ -39,9 +39,9 @@
   border: #6C63FF solid 1px;
   padding-right: 40px;
   outline: #6C63FF;
-  font-family: 'Kanit';
+  font-family: 'Inter';
 }
-.search input::placeholder {
+.search ::placeholder {
   align-content: center;
   font-family: 'Inter';
   font-weight: 500;
