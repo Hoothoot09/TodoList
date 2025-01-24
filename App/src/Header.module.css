@@ -130,9 +130,7 @@ button[data-filter='Incomplete'] {
   background: #534CC2;
 }
 .moon, .sun {
-  position: absolute;
-  top: 7px;
-  left: 6px;
+  padding: 0px;
 }
 .dark {
   background: #333;
