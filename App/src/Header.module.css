@@ -118,7 +118,8 @@ button[data-filter='Incomplete'] {
 }
 /* Button Dark mode */
 .darkMode{
-  position: relative;
+  display: flex;
+  align-items: center;
   border: #6C63FF solid 1px;
   width: 38px;
   color: white;
@@ -128,9 +129,6 @@ button[data-filter='Incomplete'] {
 }
 .darkMode:hover{
   background: #534CC2;
-}
-.moon, .sun {
-  padding: 0px;
 }
 .dark {
   background: #333;
