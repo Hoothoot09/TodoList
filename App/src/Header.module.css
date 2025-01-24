@@ -129,8 +129,7 @@ button[data-filter='Incomplete'] {
   background: #534CC2;
 }
 .moon, .sun {
-  display: flex;
-  justify-items: center;
+  justify-content: center;
 }
 .dark {
   background: #333;
