@@ -34,7 +34,7 @@
   display: flex;
   flex-grow: 1;
   width: 100%;
-  height: 38px;
+  height: 36px;
   border-radius: 5px;
   border: #6C63FF solid 1px;
   padding-right: 40px;
@@ -68,6 +68,7 @@
   display: flex;
   align-items: center;
   width: 100%;
+  height: 38px;
   position: relative;
 }
 .dark .searchContainer input {
