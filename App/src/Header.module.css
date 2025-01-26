@@ -14,7 +14,6 @@
   font-family: 'Kanit';
   font-weight: 500;
   font-size: 1.5rem;
-  height: 39px;
   line-height: 38.87px;
   color: #252525;
 }
@@ -37,7 +36,7 @@
   height: 36px;
   border-radius: 5px;
   border: #6C63FF solid 1px;
-  padding-right: 40px;
+  padding-right: 36px;
   outline: #6C63FF;
   font-family: 'Inter';
 }
