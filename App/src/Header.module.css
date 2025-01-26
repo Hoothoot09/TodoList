@@ -26,7 +26,7 @@
   justify-content: center;
   gap: 8px;
   width: 100%;
-  height: auto;
+  height: 40px;
   display: flex;
 }
 /* Search */
@@ -91,7 +91,8 @@ button[data-filter='Incomplete'] {
   width: 100%;
   min-width: 105px;
   border: #6C63FF solid 1px;
-  padding: 11px;
+  height: 40px;
+  align-items: center;
   font-family: 'Kanit';
   font-weight: 500;
   font-size: 18px;
