@@ -14,6 +14,7 @@
   font-family: 'Kanit';
   font-weight: 500;
   font-size: 1.5rem;
+  height: 39px;
   line-height: 38.87px;
   color: #252525;
 }
@@ -26,17 +27,16 @@
   gap: 8px;
   width: 100%;
   display: flex;
-  height: 40px;
 }
 /* Search */
 .search{
   display: flex;
   flex-grow: 1;
   width: 100%;
-  height: 36px;
+  height: 38px;
   border-radius: 5px;
   border: #6C63FF solid 1px;
-  padding-right: 36px;
+  padding-right: 40px;
   outline: #6C63FF;
   font-family: 'Inter';
 }
@@ -90,7 +90,7 @@ button[data-filter='Incomplete'] {
   width: 100%;
   min-width: 105px;
   border: #6C63FF solid 1px;
-  padding: 10px;
+  padding: 11px;
   font-family: 'Kanit';
   font-weight: 500;
   font-size: 18px;
@@ -113,7 +113,7 @@ button[data-filter='Incomplete'] {
 .arrowDown {
   position: absolute;
   right: 10px;
-  bottom: 15px;
+  bottom: 16px;
 }
 /* Button Dark mode */
 .darkMode{
